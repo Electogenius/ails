@@ -48,7 +48,7 @@
 			font-size: 15px;
 		}
 		button{
-			top: 50vh;
+			top:40vh;
 			z-index: 50;
 			position: absolute;
 		}
@@ -66,6 +66,7 @@
 			localStorage.ails=codeTa.value
 			ln.innerHTML=codeTa.value.split("\n").map((_,e)=>e+1).join("<br>")
 		}
+		ln.innerHTML=codeTa.value.split("\n").map((_,e)=>e+1).join("<br>")
 		codeTa.onscroll=ln.onscroll=()=>{
 			ln.scrollTop=codeTa.scrollTop
 		}
