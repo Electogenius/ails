@@ -48,14 +48,16 @@
 			font-size: 15px;
 		}
 		button{
-			margin-top: 50vh;
+			top: 50vh;
+			z-index: 50;
+			position: absolute;
 		}
 	</style>
 	<script src="src/index.js" type="text/javascript" charset="utf-8"></script>
 	<textarea autocapitalize="off" spellcheck="false" autocomplete="off" name="code" id=code rows="8" cols="40"></textarea>
 	<div id="ln">1</div>
 	<button id=run>run</button>
-	<button onclick="location=location.href">stop</button>
+	<button onclick="location=location.href" style="right:10px">stop</button>
 	<script>
 		let code=""
 		let codeTa=document.getElementById("code")
