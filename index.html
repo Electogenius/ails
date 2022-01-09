@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+
+<body>
+	<style type="text/css" media="all">
+		body {
+			background-color: #000;
+			font-family: system-ui, sans-serif;
+			/*padding: 0;
+			margin:0;*/
+		}
+		textarea{
+			left:0;
+			position: absolute;
+			width:90%;
+			padding: 0;
+			font-family: ui-monospace,menlo,monospace;
+			border-radius: 0px;
+			background-color: #222 !important;
+			color:#fff;
+			border:1px solid white;
+			border-left: none;
+			font-size: 15px;
+			padding-left: 30px;
+			outline:none;
+			height: 40vh;
+			z-index: 1;
+		}
+		#log{
+			bottom: 5px;
+			left:0px;
+		}
+		#ln{
+			z-index: 20;
+			color: grey;
+			position: absolute;
+			left: 0;
+			font-family: ui-monospace,menlo,monospace;
+			height: 40vh;
+			overflow: scroll;
+			/*line-height: 20px;*/
+			font-size: 15px;
+		}
+		button{
+			margin-top: 50vh;
+		}
+	</style>
+	<script src="src/index.js" type="text/javascript" charset="utf-8"></script>
+	<textarea autocapitalize="off" spellcheck="false" autocomplete="off" name="code" id=code rows="8" cols="40"></textarea>
+	<div id="ln">1</div>
+	<button id=run>run</button>
+	<button onclick="location=location.href">stop</button>
+	<script>
+		let code=""
+		let codeTa=document.getElementById("code")
+		codeTa.value=localStorage.getItem("ails")??""
+		codeTa.oninput=()=>{
+			localStorage.ails=codeTa.value
+			ln.innerHTML=codeTa.value.split("\n").map((_,e)=>e+1).join("<br>")
+		}
+		codeTa.onscroll=ln.onscroll=()=>{
+			ln.scrollTop=codeTa.scrollTop
+		}
+		run.onclick=()=>{
+			log.value=""
+			memory=""
+			code=['',...codeTa.value.split("\n")];
+			Ails()
+		}
+		console.log=(e)=>{
+			log.value+=e+"\n"
+		}
+	</script>
+	<textarea id=log readonly></textarea>
+</body>
+
+</html>

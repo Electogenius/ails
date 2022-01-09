@@ -14,4 +14,4 @@ Only 9 commands:
 - jump <ln>: sends pointer to a line if memory is not 0 or blank
 - output: outputs memory
 
-also there's examples in the example directory
+also there's examples in the example directory which you can run on https://electogenius.github.io/ails/

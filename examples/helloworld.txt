@@ -1,4 +1,4 @@
 get 3
 output
-Hello, world
+Hello, world!
 rather disappointing, isn't it
