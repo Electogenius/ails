@@ -47,16 +47,26 @@
 			/*line-height: 20px;*/
 			font-size: 15px;
 		}
-		button{
+		button, #mem{
 			top:40vh;
 			z-index: 50;
 			position: absolute;
+		}
+		#mem{
+			font-family: ui-monospace,menlo,monospace;
+			color:#0f5;
+			left:50vw;
+			transform: translateX(-50%);
+			background-color: #0008;
+			backdrop-filter: blur(10px);
+			-webkit-backdrop-filter: blur(10px)
 		}
 	</style>
 	<script src="src/index.js" type="text/javascript" charset="utf-8"></script>
 	<textarea autocapitalize="off" spellcheck="false" autocomplete="off" name="code" id=code rows="8" cols="40"></textarea>
 	<div id="ln">1</div>
 	<button id=run>run</button>
+	<span id=mem></span>
 	<button onclick="location=location.href" style="right:10px">stop</button>
 	<script>
 		let code=""

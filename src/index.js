@@ -27,7 +27,7 @@ function Ails(index = 0) {
 	if (/^sub \d+/.test(ln)) {
 		memory -= n(code[ln.slice(4)])
 	}
-
+	mem.innerText="Memory: "+memory
 	if (index != (code.length - 1)) window.requestAnimationFrame(() => Ails(index + 1))
 }
 
