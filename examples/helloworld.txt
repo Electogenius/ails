@@ -1,0 +1,4 @@
+get 3
+output
+Hello, world
+rather disappointing, isn't it
